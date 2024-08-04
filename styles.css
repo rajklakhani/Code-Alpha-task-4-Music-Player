@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 1.25rem;
+}
+#bar {
+  width: 0.625rem;
+  height: 1.875rem;
+  background-color: #333;
+  margin: 0 5px;
+}
+
+.loader .bar {
+  animation: bounce 1s infinite ease-in-out;
+}
+
+.loader .bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loader .bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loader .bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.loader .bar:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(2);
+  }
+}
+
+#player {
+  background-image: linear-gradient(145deg, #098, #479, #695, #849);
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 18.75rem;
+}
+
+.now-playing {
+  font-size: 1.2em;
+  margin-bottom: 0.625rem;
+}
+
+.track-info {
+  margin-bottom: 1.25rem;
+}
+
+.controls button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.controls button:hover {
+  background-color: #0056b3;
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 28px;
+  }
+}
